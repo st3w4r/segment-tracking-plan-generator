@@ -1,0 +1,20 @@
+{
+  "name": "segment-tracking-plan-generator",
+  "version": "0.1.0",
+  "description": "Automatic Generation of Segment Tracking Plan",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yanael Barbier <b.yanael@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "http": "0.0.0",
+    "json-filter": "0.0.2",
+    "json-schema-generator": "^2.0.1",
+    "lodash": "^3.10.1",
+    "mkdirp": "^0.5.1"
+  }
+}
