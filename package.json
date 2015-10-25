@@ -12,6 +12,7 @@
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
     "http": "0.0.0",
+    "is-my-json-valid": "^2.12.2",
     "json-filter": "0.0.2",
     "json-schema-generator": "^2.0.1",
     "lodash": "^3.10.1",

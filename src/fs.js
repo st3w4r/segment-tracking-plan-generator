@@ -9,7 +9,7 @@ exports.createFile = (path, fileName, json) => {
         if (err) throw err;
         console.log('Directory created ' + path);
         // Create File
-        create(path + fileName, JSON.stringify(json));
+        create(path + fileName, JSON.stringify(json, null, 4));
     });
         // }
     // });
@@ -20,5 +20,12 @@ console.log(fileName);
     fs.writeFile(fileName, data, (err) => {
         if (err) throw err;
         return 'Saved' + fileName;
+    });
+}
+
+exports.readFile = (fileName) => {
+    fs.readFile(fileName, (err, data) => {
+        if (err) throw err;
+        return data;
     });
 }
