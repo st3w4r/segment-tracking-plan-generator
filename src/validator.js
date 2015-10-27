@@ -5,6 +5,7 @@ var _ = require('lodash');
 var fs = require('fs');
 
 module.exports = (json, callback) => {
+
     var type = _.get(json, 'type', null);
     var title;
     switch (type) {
@@ -26,8 +27,9 @@ module.exports = (json, callback) => {
         var fileName = 'tracking-plan/project-id-'+ projectId  +'/' + type + '/' + title + '.json';
         console.log(fileName);
 
-        // var jsonFile = fs.readFile(fileName);
+        var jsonFile = fs.readFile(fileName);
         fs.readFile(fileName, (err, data) => {
+
             var res = {};
             if (err) {
                 res['validate'] = false;
@@ -38,7 +40,7 @@ module.exports = (json, callback) => {
             var jsonFileSchema = JSON.parse(data);
             var validate = jsonValid(jsonFileSchema);
 
-            res['validate'] = validate(json,{greedy: true});
+            res['validate'] = validate(json);
             res['message'] = validate.error;
 
             if (res['validate'] === true)
