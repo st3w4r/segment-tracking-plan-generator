@@ -51,6 +51,7 @@ module.exports = (json, callback) => {
         });
     }
     else {
+        var res = {};
         res['validate'] = false;
         res['message'] = 'Json Schema Not found: projectId, type or title is missing';
         res['code'] = 400;
